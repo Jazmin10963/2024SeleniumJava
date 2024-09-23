@@ -58,6 +58,5 @@ public class testGoogle {
 		
 		List<WebElement> elementosTercerResultado = driver.findElements(By.xpath("//h1[contains(text(),'"+busqueda+"')]"));
 		Assert.assertTrue(elementosTercerResultado.size()>0, "No hay un título que contenga el texto "+busqueda);
-		driver.close();
 	}
 }

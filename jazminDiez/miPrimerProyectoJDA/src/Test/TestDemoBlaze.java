@@ -38,20 +38,24 @@ public class TestDemoBlaze {
 		// Abrimos el demoblaze
 		driver.get("https://www.demoblaze.com/index.html");
 		MetodosUtiles.Utiles.step("Abrimos la pagina web www.demoblaze.com");
-		WebElement categorias = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='cat']")));
-		categorias.click();
-		WebElement catLaptop = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[5]/div[1]/div[1]/div[1]/a[3]")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Samsung galaxy s6']")));
+		WebElement catLaptop = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[normalize-space()='Laptops'])[1]")));
 		MetodosUtiles.Utiles.step("buscamos el botón correspondiente a la categoría Laptops y chequeamos que esté visible");
 		Assert.assertTrue(catLaptop.isDisplayed());
-		List<WebElement> allProductsBefore = driver.findElements(By.xpath("//h5[contains(text(),'$')]"));
+		List<WebElement> allProductsBefore = driver.findElements(By.xpath("(//div[@class='col-lg-4 col-md-6 mb-4'])"));
         int totalProductsBefore = allProductsBefore.size();
                 MetodosUtiles.Utiles.step("Chequeamos la cantidad de productos antes de filtrar por categoría, son "+totalProductsBefore);
+        MetodosUtiles.Utiles.step("Hacemos click en la categoría Laptops");
 		catLaptop.click();
-		MetodosUtiles.Utiles.step("Hacemos click en la categoría Laptops");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@id='contcont']/div[@class='row']/div[@class='col-lg-9']/div[@id='tbodyid']/div[2]/div[1]/a[1]")));
-		List<WebElement> allProductsAfter = driver.findElements(By.className("hrefch"));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Sony vaio i5']")));
+		List<WebElement> allProductsAfter = driver.findElements(By.xpath("(//div[@class='col-lg-4 col-md-6 mb-4'])"));
 		int totalProductsAfter = allProductsAfter.size();
         MetodosUtiles.Utiles.step("Chequeamos la cantidad de productos después de filtrar por categoría, son "+totalProductsAfter);
 		
+	}
+
+	private By ByXPath(String string) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

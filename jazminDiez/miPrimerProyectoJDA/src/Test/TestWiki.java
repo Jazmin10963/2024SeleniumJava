@@ -40,6 +40,5 @@ public class TestWiki {
 		WebElement tituloResultado = driver.findElement(By.id("firstHeading"));
 		System.out.println("Texto encontrado " + tituloResultado.getText());
 		Assert.assertTrue(tituloResultado.isDisplayed(),"No se encontró el título de la página");
-		driver.close();
 	}
 }
