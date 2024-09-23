@@ -1,0 +1,5 @@
+Victoria Recchia:
+	TestGoogle: 
+		No se encuentra el elemento {"method":"xpath","selector":"//h3[contains(text(),'Morrissey aceptó reunir a The Smiths en 2025 pero ')]"}. Buscar un identificador más general para el tercer elemento.
+	TestWiki:
+		No se detecta el elemento “firstHeading”, Revisar lineas 37 y 48.

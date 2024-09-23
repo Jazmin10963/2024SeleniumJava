@@ -1,0 +1,5 @@
+Tomas Mongi:
+	TestDemoBlaze: 
+		El elemento <a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;">...</a> no se detecta como clickeable. Revisar la línea 54.
+	TestWiki:
+		Establecer la ubicación de chromedriver como una general.

@@ -1,0 +1,3 @@
+Ignacio Mongi:
+	DemoBlaze: 
+		Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "this.wait" is null. No estoy segura de cómo arreglar esto.

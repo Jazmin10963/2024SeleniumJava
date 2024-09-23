@@ -1,0 +1,3 @@
+Sofia Toledo:
+	DemoBlaze: 
+		El WebDriverWait no me funciona. Una opción es cambiarlo por Thread.sleep(10000);

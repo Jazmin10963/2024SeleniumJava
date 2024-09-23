@@ -1,0 +1,8 @@
+Florencia Otero:
+	DemoBlaze: 
+		Agregar el driver de firefox en la carpeta “Driver” y establecer la ubicación fireFox como una general.
+		El WebDriverWait no me funciona. Una opción es cambiarlo por Thread.sleep(10000) o wait = new WebDriverWait(driver, Duration.ofSeconds(10));.
+	TestGoogle: 
+		Establecer la ubicación de chromedriver como una general.
+	TestWiki:
+		Establecer la ubicación de chromedriver como una general.
