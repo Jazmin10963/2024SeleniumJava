@@ -47,15 +47,11 @@ public class TestDemoBlaze {
                 MetodosUtiles.Utiles.step("Chequeamos la cantidad de productos antes de filtrar por categoría, son "+totalProductsBefore);
         MetodosUtiles.Utiles.step("Hacemos click en la categoría Laptops");
 		catLaptop.click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Sony vaio i5']")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='MacBook Pro']")));
 		List<WebElement> allProductsAfter = driver.findElements(By.xpath("(//div[@class='col-lg-4 col-md-6 mb-4'])"));
 		int totalProductsAfter = allProductsAfter.size();
         MetodosUtiles.Utiles.step("Chequeamos la cantidad de productos después de filtrar por categoría, son "+totalProductsAfter);
+		Assert.assertTrue(totalProductsBefore>totalProductsAfter, "No se filtraron los elementos correctamente");
 		
-	}
-
-	private By ByXPath(String string) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }
